@@ -9,6 +9,7 @@ module.exports = {
     "@vue/typescript/recommended",
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint",
+    "prettier",
   ],
   parserOptions: {
     ecmaVersion: 2020,
@@ -16,5 +17,20 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-non-null-assertion": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        trailingComma: "es5",
+        useTabs: true,
+        tabWidth: 4,
+        semi: true,
+        singleQuote: true,
+        endOfLine: "auto",
+        printWidth: 120,
+        htmlWhitespaceSensitivity: "ignore",
+      },
+    ],
   },
 };

@@ -1,0 +1,87 @@
+@use 'sass:color';
+@use '~@miraidesigns/base';
+@use '~@miraidesigns/fx';
+@use '~@miraidesigns/helpers';
+@use '~@miraidesigns/theme';
+@use '~@miraidesigns/typography';
+@use '~@miraidesigns/utils';
+
+.#{base.$prefix}-slide {
+	&__controls {
+		position: relative;
+		left: utils.px2rem(-16px);
+
+		.#{base.$prefix}-icon {
+			height: utils.px2rem(32px);
+			width: utils.px2rem(32px);
+		}
+	}
+
+	&__content {
+		justify-content: flex-start;
+		padding-top: utils.px2rem(16px);
+
+		.#{base.$prefix}-checklist-form {
+			width: 100%;
+		}
+	}
+
+	&__footer {
+		@include helpers.padding(24px);
+	}
+}
+
+.#{base.$prefix}-checklist {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-header {
+		@include helpers.margin(0 0 16px 0);
+		@include helpers.padding(12px 8px);
+
+		display: flex;
+		align-items: center;
+		width: 100%;
+		background-color: var(--background-hover, #{theme.prop('background-hover')});
+		border-radius: utils.px2rem(4px);
+
+		&__title {
+			position: relative;
+			top: 4px;
+		}
+
+		&__meta {
+			position: relative;
+			bottom: 0;
+			color: var(--secondary, #{theme.prop('secondary')});
+			font-size: utils.px2rem(13px);
+			font-weight: 500;
+		}
+
+		.#{base.$prefix}-icon {
+			@include helpers.margin(0 24px 0 16px);
+		}
+	}
+
+	&__item {
+		@include helpers.padding(16px 0 8px 0);
+
+		display: flex;
+		align-items: center;
+		border-bottom: utils.px2rem(1px) solid var(--border, #{theme.prop('border')});
+
+		.#{base.$prefix}-checkbox {
+			align-self: flex-start;
+		}
+
+		label {
+			font-size: utils.px2rem(20px);
+
+			&.done {
+				text-decoration: line-through;
+			}
+		}
+	}
+}

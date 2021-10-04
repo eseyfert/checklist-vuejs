@@ -1,24 +1,13 @@
-# checklist-vuejs
+# Thoughts.
 
-## Project setup
-```
-npm install
-```
+A simple and elegant checklist app that helps you stay organized.\
+This app is a proof of concept and not meant for production environments.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Seamlessly add, edit and remove checklists that are stored using the IndexedDB interface.\
+Also allows the user to change various preferences for the app's design.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Demo
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Feel free to check out [the demo hosted on firebase](https://checklist-vuejs-ac7ea.web.app//).
